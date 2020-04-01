@@ -83,6 +83,8 @@ body {
     }
 
     .Transactions-List {
+      max-height: 210px;
+      overflow: auto;
       list-style-type: none;
       padding: 0;
       margin-bottom: 40px;
@@ -106,11 +108,11 @@ body {
         }
 
         li.Minus {
-          border-right: 5px solid #c0392b;
+          border-right: 7px solid #c0392b;
         }
 
         li.Plus {
-          border-right: 5px solid #2ecc71;
+          border-right: 7px solid #2ecc71;
         }
 
         .Delete-Button {

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Transaction from "./Transaction";
-
 import { AppContext } from "../../context/GlobalState";
 
 function Transactions() {
