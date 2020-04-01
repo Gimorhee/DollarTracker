@@ -1,1 +1,193 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #29c7ac;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.Main-Container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+.Main-Container .Balance-Container .Balance-Header {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.Main-Container .Balance-Container .Balance-Total {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.Main-Container .IncomeOrExpense-Container {
+  background-color: #fff;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+
+.Main-Container .IncomeOrExpense-Container > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.Main-Container .IncomeOrExpense-Container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.Main-Container .IncomeOrExpense-Container .Income-Header,
+.Main-Container .IncomeOrExpense-Container .Expense-Header {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.Main-Container .IncomeOrExpense-Container .Money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.Main-Container .IncomeOrExpense-Container .Money.Plus {
+  color: #2ecc71;
+}
+
+.Main-Container .IncomeOrExpense-Container .Money.Minus {
+  color: #c0392b;
+}
+
+.Main-Container .Transactions-Container .Transactions-Header {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+.Main-Container .Transactions-Container .Transactions-List {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.Main-Container .Transactions-Container .Transactions-List .Transaction-Container li {
+  background-color: #fff;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.Main-Container .Transactions-Container .Transactions-List .Transaction-Container li:hover .Delete-Button {
+  opacity: 1;
+}
+
+.Main-Container .Transactions-Container .Transactions-List .Transaction-Container li.Minus {
+  border-right: 5px solid #c0392b;
+}
+
+.Main-Container .Transactions-Container .Transactions-List .Transaction-Container li.Plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.Main-Container .Transactions-Container .Transactions-List .Transaction-Container .Delete-Button {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.Main-Container .AddTransaction-Container .AddTransaction-Label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.Main-Container .AddTransaction-Container .Label-Breaker {
+  margin: 0 10px;
+}
+
+.Main-Container .AddTransaction-Container input[type="text"],
+.Main-Container .AddTransaction-Container input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.Main-Container .AddTransaction-Container .Add-Button {
+  cursor: pointer;
+  background-color: #142850;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.Main-Container .AddTransaction-Container .Add-Button:focus,
+.Main-Container .AddTransaction-Container .Delete-Button:focus {
+  outline: 0;
+}
+
+@media (max-width: 320px) {
+  .Main-Container {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
