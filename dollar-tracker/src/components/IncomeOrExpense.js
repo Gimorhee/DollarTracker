@@ -23,7 +23,7 @@ function IncomeOrExpense() {
       </div>
       <div>
         <h4 className="Expense-Header">Expense</h4>
-        <p className="Money Minus">${expense}</p>
+        <p className="Money Minus">${expense}.00</p>
       </div>
     </div>
   );

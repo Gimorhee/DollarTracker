@@ -1,0 +1,33 @@
+{
+  "name": "DollarTracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "dollar-tracker": "npm start --prefix dollar-tracker",
+    "dev": "concurrently \"npm run server\" \"npm run dollar-tracker\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gimorhee/DollarTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gimorhee/DollarTracker/issues"
+  },
+  "homepage": "https://github.com/Gimorhee/DollarTracker#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
