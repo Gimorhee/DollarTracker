@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Transaction from "./Transaction";
 import { AppContext } from "../../context/GlobalState";
 
 function Transactions() {
-  const { transactions } = useContext(AppContext);
+  const { transactions, getTransactions } = useContext(AppContext);
+
+  useEffect(() => {
+    getTransactions();
+  }, []);
 
   return (
     <div className="Transactions-Container">

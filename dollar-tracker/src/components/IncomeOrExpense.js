@@ -1,6 +1,10 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/GlobalState";
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function IncomeOrExpense() {
   const { transactions } = useContext(AppContext);
 
@@ -19,11 +23,11 @@ function IncomeOrExpense() {
     <div className="IncomeOrExpense-Container">
       <div>
         <h4 className="Income-Header">Income</h4>
-        <p className="Money Plus">${income}</p>
+        <p className="Money Plus">${numberWithCommas(income)}</p>
       </div>
       <div>
         <h4 className="Expense-Header">Expense</h4>
-        <p className="Money Minus">${expense}.00</p>
+        <p className="Money Minus">${numberWithCommas(expense)}.00</p>
       </div>
     </div>
   );

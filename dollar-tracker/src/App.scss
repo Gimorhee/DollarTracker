@@ -42,8 +42,18 @@ body {
     .Balance-Total {
       letter-spacing: 1px;
       margin: 0;
-      font-family: "Open Sans Condensed", sans-serif;
+      font-family: "Chilanka", cursive;
       font-weight: 500;
+    }
+
+    .Minus {
+      color: #ca431d;
+      text-shadow: 1px 1px red;
+    }
+
+    .Plus {
+      color: #4bbb8b;
+      text-shadow: 1px 1px green;
     }
   }
 

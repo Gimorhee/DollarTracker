@@ -51,8 +51,18 @@ body {
 .Main-Container .Balance-Container .Balance-Total {
   letter-spacing: 1px;
   margin: 0;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Chilanka", cursive;
   font-weight: 500;
+}
+
+.Main-Container .Balance-Container .Minus {
+  color: #ca431d;
+  text-shadow: 1px 1px red;
+}
+
+.Main-Container .Balance-Container .Plus {
+  color: #4bbb8b;
+  text-shadow: 1px 1px green;
 }
 
 .Main-Container .IncomeOrExpense-Container {
