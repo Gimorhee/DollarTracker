@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&display=swap");
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -9,7 +10,7 @@
 }
 
 body {
-  background-color: #29c7ac;
+  background-color: #a5aeff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,12 +26,21 @@ body {
           justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Chilanka", cursive;
+}
+
+.Header-Container .Header-Header {
+  color: #0f117a;
+  margin: 0;
 }
 
 .Main-Container {
-  margin: 30px auto;
+  margin: 25px auto;
   width: 350px;
+}
+
+.Main-Container .Balance-Container {
+  color: #0f117a;
 }
 
 .Main-Container .Balance-Container .Balance-Header {
@@ -41,6 +51,8 @@ body {
 .Main-Container .Balance-Container .Balance-Total {
   letter-spacing: 1px;
   margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 500;
 }
 
 .Main-Container .IncomeOrExpense-Container {
@@ -72,6 +84,7 @@ body {
 .Main-Container .IncomeOrExpense-Container .Expense-Header {
   margin: 0;
   text-transform: uppercase;
+  color: #0f117a;
 }
 
 .Main-Container .IncomeOrExpense-Container .Money {
@@ -81,32 +94,48 @@ body {
 }
 
 .Main-Container .IncomeOrExpense-Container .Money.Plus {
-  color: #2ecc71;
+  color: #4bbb8b;
+  font-weight: 900;
 }
 
 .Main-Container .IncomeOrExpense-Container .Money.Minus {
-  color: #c0392b;
+  color: #ca431d;
+  font-weight: 900;
 }
 
 .Main-Container .Transactions-Container .Transactions-Header {
-  border-bottom: 1px solid #fff;
+  color: #0f117a;
+  border-bottom: 2px solid #fff;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
 
 .Main-Container .Transactions-Container .Transactions-List {
   max-height: 210px;
-  overflow: auto;
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Main-Container .Transactions-Container .Transactions-List .Transaction-Container li {
   background-color: #fff;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  color: #333;
+  color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +144,9 @@ body {
           justify-content: space-between;
   position: relative;
   padding: 10px;
-  margin: 10px 0;
+  margin: 5px;
+  width: 285px;
+  font-weight: 600;
 }
 
 .Main-Container .Transactions-Container .Transactions-List .Transaction-Container li:hover .Delete-Button {
@@ -123,16 +154,16 @@ body {
 }
 
 .Main-Container .Transactions-Container .Transactions-List .Transaction-Container li.Minus {
-  border-right: 7px solid #c0392b;
+  border-right: 7px solid #ca431d;
 }
 
 .Main-Container .Transactions-Container .Transactions-List .Transaction-Container li.Plus {
-  border-right: 7px solid #2ecc71;
+  border-right: 7px solid #4bbb8b;
 }
 
 .Main-Container .Transactions-Container .Transactions-List .Transaction-Container .Delete-Button {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: #ca431d;
   border: 0;
   color: #fff;
   font-size: 20px;
@@ -146,11 +177,23 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  height: 38px;
+}
+
+.Main-Container .AddTransaction-Container {
+  color: #0f117a;
+}
+
+.Main-Container .AddTransaction-Container .AddTransaction-Header {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
 }
 
 .Main-Container .AddTransaction-Container .AddTransaction-Label {
   display: inline-block;
   margin: 10px 0;
+  font-weight: 600;
 }
 
 .Main-Container .AddTransaction-Container .Label-Breaker {
@@ -167,15 +210,40 @@ body {
   width: 100%;
 }
 
+.Main-Container .AddTransaction-Container input[type="text"]::-webkit-input-placeholder,
+.Main-Container .AddTransaction-Container input[type="number"]::-webkit-input-placeholder {
+  font-family: "Chilanka", cursive;
+  font-weight: 900;
+}
+
+.Main-Container .AddTransaction-Container input[type="text"]:-ms-input-placeholder,
+.Main-Container .AddTransaction-Container input[type="number"]:-ms-input-placeholder {
+  font-family: "Chilanka", cursive;
+  font-weight: 900;
+}
+
+.Main-Container .AddTransaction-Container input[type="text"]::-ms-input-placeholder,
+.Main-Container .AddTransaction-Container input[type="number"]::-ms-input-placeholder {
+  font-family: "Chilanka", cursive;
+  font-weight: 900;
+}
+
+.Main-Container .AddTransaction-Container input[type="text"]::placeholder,
+.Main-Container .AddTransaction-Container input[type="number"]::placeholder {
+  font-family: "Chilanka", cursive;
+  font-weight: 900;
+}
+
 .Main-Container .AddTransaction-Container .Add-Button {
+  font-family: "Chilanka", cursive;
   cursor: pointer;
-  background-color: #142850;
+  background-color: #6a5acd;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 10px 0 30px;
   padding: 15px;
   width: 100%;

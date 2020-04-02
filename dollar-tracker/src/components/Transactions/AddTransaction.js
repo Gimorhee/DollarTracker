@@ -33,7 +33,7 @@ function AddTransaction() {
 
   return (
     <div className="AddTransaction-Container">
-      <h3>Add new transaction</h3>
+      <h3 className="AddTransaction-Header">Add new transaction</h3>
       <form onSubmit={e => onSubmit(e)}>
         <div className="form-control">
           <label className="AddTransaction-Label" htmlFor="text">
