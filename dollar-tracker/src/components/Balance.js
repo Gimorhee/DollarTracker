@@ -21,8 +21,7 @@ function Balance() {
           totalBalance < 0 ? "Minus Total-Balance" : "Plus Total-Balance"
         }
       >
-        {totalBalance < 0 ? "-" : "+"}$
-        {numberWithCommas(Math.abs(totalBalance))}
+        {totalBalance < 0 && "-"}${numberWithCommas(Math.abs(totalBalance))}
       </h1>
     </div>
   );

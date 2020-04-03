@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -14,6 +15,16 @@ const transactions = require("./routes/transactions");
 app.use(express.json());
 
 app.use("/api/transactions", transactions);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("dollar-tracker/build"));
+
+  app.get("*", (req, res) =>
+    res.sendFile(
+      path.resolve(__dirname, "dollar-tracker", "build", "index.html")
+    )
+  );
+}
 
 app.listen(PORT, () => {
   console.log(
